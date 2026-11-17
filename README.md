@@ -107,7 +107,9 @@ With the server running, add 20 sample courses (programming, data science, desig
 npm run seed
 ```
 
-Seeded courses have fixed ids (`seed-01` to `seed-20`), so running it again updates them instead of creating duplicates. Like the tests, it uses `API_URL` if set.
+Seeded courses have fixed ids (`seed-01` to `seed-20`), so running it again updates them instead of creating duplicates.
+
+It sends requests to `http://localhost:3000`. To seed a different server, change `BASE_URL` at the top of `seed.js`.
 
 ## Testing
 
@@ -118,10 +120,10 @@ npm start      # in one terminal
 npm test       # in another
 ```
 
-To test a different server, set `API_URL`:
+Tests run against `http://localhost:3000`. To test a different server, change `BASE_URL` at the top of `test.js`:
 
-```bash
-API_URL=https://my-api.example.com npm test
+```js
+const BASE_URL = 'https://my-api.example.com';
 ```
 
 Tests add real courses to your Pinecone index, then delete them at the end of the run.
