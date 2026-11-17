@@ -1,0 +1,22 @@
+{
+  "name": "semantic-search-api",
+  "version": "1.0.0",
+  "description": "Semantic search API for courses using Pinecone",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node test.js",
+    "seed": "node seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^9.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0"
+  }
+}
